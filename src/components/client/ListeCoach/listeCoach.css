@@ -1,0 +1,139 @@
+.container1 {
+    position: absolute;
+    top: 80px;
+    left: 270px;
+    right: 20px;
+    margin: auto;
+    width: calc(100% - 290px);
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #444;
+}
+
+/* Coaches List */
+.coaches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Coach Row */
+.coach-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid orange;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Rank */
+.rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: orange;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.rank .position {
+    font-size: 1.5rem;
+}
+
+.rank .status {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Coach Picture */
+.coach-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 3px solid orange;
+}
+
+/* Coach Details */
+.coach-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.coach-details h2 {
+    font-size: 18px;
+    color: orange;
+    margin: 0 0 5px;
+}
+
+.coach-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+/* Score */
+.score {
+    text-align: center;
+    margin-right: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+.score .score-value {
+    font-size: 1.5rem;
+    display: block;
+}
+
+.score p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* View Profile Button */
+.view-profile-btn {
+    padding: 10px 15px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-profile-btn:hover {
+    background-color: #ff6600;
+}

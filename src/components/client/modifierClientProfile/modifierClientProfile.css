@@ -1,0 +1,105 @@
+.container {
+    position: absolute;
+    top: 80px;
+    left: 270px;
+    right: 20px;
+    margin: auto;
+    width: calc(100%);
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    /* Header Styling */
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+
+        h1 {
+            font-size: 24px;
+            color: #444;
+        }
+    }
+
+    /* Form Styling */
+    .profile-form {
+        display: flex;
+        flex-direction: column;
+
+        /* Input Rows */
+        .row,
+        .row-poids-taille {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            margin-bottom: 15px;
+            margin-left: 10px;
+            .form-group {
+                flex: 1;
+
+
+                label {
+                    display: block;
+                    font-size: 14px;
+                    color: #666;
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid transparent;
+                    border-bottom: 1px solid orange;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    outline: none;
+
+                    &:focus {
+                        border-color: #c49f3c;
+                    }
+                }
+            }
+        }
+
+        /* File Input and Button */
+        .form-group {
+            input[type="file"] {
+                width: 100%;
+            }
+
+            .photo-btn {
+                display: block;
+                margin-top: 10px;
+                padding: 10px;
+                font-size: 14px;
+                color: rgb(202, 82, 2);
+                background-color: #ff680069;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: orange;
+                }
+            }
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #00b69b52;
+            color: #0c4d1a;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+
+            &:hover {
+                background-color: #2daf49;
+            }
+        }
+    }
+}

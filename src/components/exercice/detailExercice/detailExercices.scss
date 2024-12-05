@@ -1,0 +1,116 @@
+.containerDE {
+    margin: 50px auto;
+    max-width: 90%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .detHeader {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        color: white;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        width: 100%;
+        height: 70%;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darkorange;
+            }
+        }
+    }
+
+    .detContent {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        width: 100%;
+        margin-top: 20px;
+
+        .left {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+
+            .exercise-video {
+                width: 100%;
+                height: 85%;
+                max-width: 600px;
+                border: 2px solid orange;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .right1 {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+            padding: 50px;
+
+            h1 {
+                font-size: 2rem;
+                color: orange;
+                margin-bottom: 15px;
+            }
+
+            .box {
+                background-color: #fff;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-left: 4px solid orange;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                h4 {
+                    font-size: 1.2rem;
+                    color: #333;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: #555;
+                }
+            }
+        }
+    }
+}

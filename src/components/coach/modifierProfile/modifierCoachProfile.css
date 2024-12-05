@@ -1,0 +1,90 @@
+/* Main Container */
+.container {
+    margin: 100px auto;
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: orange;
+}
+
+
+.form-group input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid orange;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #c49f3c;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #00B69B52;
+    color: #0c4d1a;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #2daf49;
+}
+.coach-details1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.coach-details1 .btnModif{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.coach-details1 .btnModif:hover{
+    background-color: #ffffff;
+    color: orange;
+    border: 1px solid orange;
+
+}

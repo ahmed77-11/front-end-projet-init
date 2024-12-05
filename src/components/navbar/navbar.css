@@ -1,0 +1,68 @@
+/* Navbar */
+.navbar {
+    width: calc(100% - 250px);
+    background-color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+}
+
+/* Profile Picture in Navbar */
+.profile-picture {
+    width: 40px;          /* Keep the width */
+    height: 40px;         /* Set the height to match the width */
+    padding: 0;           /* Remove any padding, as it's not necessary for circular images */
+    border-radius: 50%;   /* Set to 50% to make the image circular */
+    object-fit: cover;    /* Ensure the image covers the area properly */
+    border: 2px solid transparent;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    margin-right: 20px;
+}
+
+.profile-picture:hover {
+    border-color: orange;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+/* Input Fields */
+.navbar input[type="text"] {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid orange;
+    border-radius: 5px;
+}
+.dropdown1 {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    right: 0;
+    background: white;
+    border: 1px solid orange;
+    border-radius: 5px;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    width: 84%;
+}
+
+.dropdown1 li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown1 li:hover {
+    background-color: #f0f0f0;
+}
