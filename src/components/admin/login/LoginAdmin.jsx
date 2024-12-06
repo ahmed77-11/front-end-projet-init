@@ -30,9 +30,8 @@ const LoginAdmin = () => {
                 <div className="headerLogin">
                     <p>Admin Login</p>
                     <div className="logo-login">
-                        <h1>N7Bk W7CH</h1>
+                        <h1>Fit2A2S</h1>
                         <span>
-                            <CiDumbbell />
                         </span>
                     </div>
                 </div>

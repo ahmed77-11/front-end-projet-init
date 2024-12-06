@@ -1,0 +1,109 @@
+/* Reset */
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.introCont {
+    background-image: url('/public/assets/images/bgIntro.jpg');
+    background-size: cover; /* Couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Rendre l'image fixe lors du défilement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    margin: 0; /* Enlève les marges par défaut */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar */
+.navbar1 {
+    position: absolute;
+    top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #FFA726;
+}
+
+/* Hero Content */
+.hero-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px; /* Ajuste la distance avec le texte */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Login Button */
+.login-btn {
+    background: #FFF;
+    color: #FB8C00;
+    border: 2px solid #FB8C00;
+}
+
+.login-btn:hover {
+    background: #FB8C00;
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+/* Signup Button */
+.signup-btn {
+    background: #FB8C00;
+    color: #FFF;
+}
+
+.signup-btn:hover {
+    background: #FFA726;
+    transform: scale(1.1);
+}

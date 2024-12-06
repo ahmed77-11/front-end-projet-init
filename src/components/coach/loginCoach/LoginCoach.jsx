@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { loginCoach, signInFailure } from "../../../redux/user/userSlice.js";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const LoginCoach = () => {
     const dispatch = useDispatch();
@@ -55,13 +55,12 @@ const LoginCoach = () => {
             {loading && <div className="loader">loading</div>}
             <div className="left">
                 <div className="logo-login">
-                    <h1>N7Bk W7CH</h1>
+                    <h1>Fit2A2S</h1>
                     <span>
-            <CiDumbbell />
           </span>
                 </div>
                 <div className="formLogin">
-                    <h1>Sign In To Our Website As A Coach</h1>
+                    <h1>Connectez-vous à notre site Web en tant que coach</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="formField">
                             <input
@@ -91,10 +90,10 @@ const LoginCoach = () => {
                         {error && <p className="error">{error}</p>}
                         <div className="signUpNav">
                             <p>
-                                Don't have an account? <a href="#">Sign Up</a>
+                                Tu n&#39;as pas de compte? <Link to="/signUpCoach">s'inscrire</Link>
                             </p>
                             <p>
-                                Log In As A Client <a href="#">Sign In Client</a>
+                                Connecter en tant que Client  <Link to="/login">Se Connecter Client</Link>
                             </p>
                         </div>
                     </form>
@@ -104,9 +103,9 @@ const LoginCoach = () => {
                 <img src="/assets/images/bgLoginCoach.jpg" alt="" />
                 <div className="contentRight">
                     <h1>
-                        Welcome Back In <span>N7Bk W7CH</span>
+                        Bienvenue Dans{""}<span>Fit2A2S</span>
                     </h1>
-                    <p>Keep Coaching People To Make Them Fit</p>
+                    <p>Rester En Forme</p>
                 </div>
             </div>
         </div>

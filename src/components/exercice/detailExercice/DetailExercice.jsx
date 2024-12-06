@@ -2,11 +2,12 @@ import "./detailExercices.scss";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import {useSelector} from "react-redux";
 
 const DetailExercice = () => {
     const [exercice, setExercice] = useState(null); // Initialize as null to handle loading state
     const { id } = useParams();
-
+    const {role}=useSelector(state => state.user);
     const fetchData = async () => {
         try {
             const res = await axios.get(`http://localhost:3000/api/exercice/getExercice/${id}`, {
@@ -45,7 +46,7 @@ const DetailExercice = () => {
             >
                 <h1>{exercice.nom || "Nom indisponible"}</h1>
                 <p>{exercice.description || "Description indisponible"}</p>
-                <button>Modifier</button>
+                {role!=="CLIENT"&& <button>Modifier</button>}
             </div>
             <div className="detContent">
                 <div className="left">

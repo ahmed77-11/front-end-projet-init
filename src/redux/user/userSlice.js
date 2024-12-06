@@ -123,11 +123,23 @@ const userSlice = createSlice({
         followCoachFailure(state,action){
             state.error=action.payload;
             state.loading=false;
+        },
+        logoutStart:(state)=>{
+            state.loading=true;
+        },
+        logoutSucces:(state)=>{
+            state.current=null;
+            state.loading=false;
+            state.error=null;
+        },
+        logoutFailure:(state,action)=>{
+            state.error=action.payload;
+            state.loading=false;
         }
     }
 });
 
-export const {signInStart,signInSuccess,signInFailure,signUpStart,signUpSuccess,signUpFailure,signUpCoachSuccess,signUpCoachStart,signUpCoachFailure,signInCoachFailure,signInCoachStart,signInCoachSuccess,signInAdminFailure,signInAdminStart,signInAdminSuccess,updateCoachDataStart,updateCoachDataSuccess,updateCoachDataFailure,updateClientDataStart,updateClientDataFailure,updateClientDataSuccess,followCoachStart,followCoachSuccess,followCoachFailure} = userSlice.actions;
+export const {signInStart,signInSuccess,signInFailure,signUpStart,signUpSuccess,signUpFailure,signUpCoachSuccess,signUpCoachStart,signUpCoachFailure,signInCoachFailure,signInCoachStart,signInCoachSuccess,signInAdminFailure,signInAdminStart,signInAdminSuccess,updateCoachDataStart,updateCoachDataSuccess,updateCoachDataFailure,updateClientDataStart,updateClientDataFailure,updateClientDataSuccess,followCoachStart,followCoachSuccess,followCoachFailure,logoutStart,logoutSucces,logoutFailure} = userSlice.actions;
 
 export const signUpClient = (userData) => async (dispatch) => {
     dispatch(signUpStart());
@@ -157,7 +169,7 @@ export const loginClient = (userData,navigate)=>async  (dispatch)=>{
             },withCredentials:true
         });
         dispatch(signInSuccess(response.data));
-        navigate("/dashboard")// Handle the response data (e.g., token, user info)
+        navigate("/client/dashboard/acceuille")// Handle the response data (e.g., token, user info)
     } catch (error) {
         dispatch(signInFailure(error.response?.data?.message || "Sign-in failed"));
     }
@@ -195,8 +207,9 @@ export const loginCoach=(userData,navigate)=>async (dispatch)=>{
             },withCredentials:true
         });
         dispatch(signInCoachSuccess(response.data));
-        navigate("/dashboard")// Handle the response data (e.g., token, user info)
+        navigate("/coach/dashboard/profile")// Handle the response data (e.g., token, user info)
     } catch (error) {
+        console.log(error)
         dispatch(signInCoachFailure(error.response?.data?.message || "Sign-in failed"));
     }
 }
@@ -209,7 +222,7 @@ export const loginAdmin=(userData,navigate)=>async (dispatch)=>{
             },withCredentials:true
         });
         dispatch(signInAdminSuccess(response.data));
-        navigate("/dashboard")// Handle the response data (e.g., token, user info)
+        navigate("/admin/dashboard/listeVerifCoach")// Handle the response data (e.g., token, user info)
     } catch (error) {
         dispatch(signInAdminFailure(error.response?.data?.message || "Sign-in failed"));
     }
@@ -235,7 +248,7 @@ export const updateCoachData= (coachData,navigate)=>async (dispatch)=>{
             withCredentials:true
         });
         dispatch(updateCoachDataSuccess(response.data));
-        navigate("/coach/dashboard/")// Handle the response data (e.g., token, user info);
+        navigate("/coach/dashboard/profile")// Handle the response data (e.g., token, user info);
     }catch (error){
         console.log(error)
         dispatch(updateCoachDataFailure(error.response?.data?.message || "Update failed"));
@@ -257,7 +270,7 @@ export const updateClientData= (clientData,navigate)=>async (dispatch)=>{
             withCredentials:true
         });
         dispatch(updateClientDataSuccess(response.data));
-        navigate("/client/dashboard/")// Handle the response data (e.g., token, user info);
+        navigate("/client/dashboard/profile")// Handle the response data (e.g., token, user info);
     }catch (error){
         console.log(error)
         dispatch(updateClientDataFailure(error.response?.data?.message || "Update failed"));
@@ -277,6 +290,18 @@ export const followCoach= (id)=>async (dispatch)=>{
         dispatch(followCoachFailure(e.message || "An error occurred while fetching data"));
         toast.error(e.message || "An error occurred while fetching data")
 
+    }
+}
+export const logout=()=>async (dispatch)=>{
+    dispatch(logoutStart());
+    try{
+        const res=await axios.get("http://localhost:3000/api/auth/logout",{withCredentials:true});
+        dispatch(logoutSucces());
+
+    }catch (e){
+        console.error(e);
+        dispatch(logoutFailure(e.message || "An error occurred while fetching data"));
+        toast.error(e.message || "An error occurred while fetching data")
     }
 }
 

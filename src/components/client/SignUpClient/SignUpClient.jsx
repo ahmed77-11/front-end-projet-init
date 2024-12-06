@@ -67,13 +67,12 @@ const SignUpClient = () => {
                 <>
                     <div className="left">
                         <div className="logo-login">
-                            <h1>N7Bk W7CH</h1>
+                            <h1>Fit2A2S</h1>
                             <span>
-                <CiDumbbell />
               </span>
                         </div>
                         <div className="formLogin">
-                            <h1>Sign Up To Our Website</h1>
+                            <h1>Inscrivez-vous sur notre site Web</h1>
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="formFieldDouble">
                                     <div className="formField">
@@ -154,27 +153,33 @@ const SignUpClient = () => {
                                 <div className="btnSubimtForm">
                                     <input
                                         type="submit"
-                                        value={loading ? "Submitting..." : "Sign Up"}
+                                        value={loading ? "Submitting..." : "Se Connecter"}
                                         disabled={loading}
                                     />
                                 </div>
                                 {error && <p className="error">{error}</p>}
                                 <div className="signUpNav">
                                     <p>
-                                        Already Have An Account?{" "}
-                                        <a onClick={() => navigate("/signin")}>Sign In</a>
+                                        deja a un compte?{" "}
+                                        <a onClick={() => navigate("/login")}>Se Connecter</a>
+                                    </p>
+                                </div>
+                                <div className="signUpNav">
+                                    <p>
+                                        Créer un compte en tant que coach?{" "}
+                                        <a onClick={() => navigate("/signUpCoach")}>S'inscrire</a>
                                     </p>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div className="right">
-                        <img src="/assets/images/bgSignUP.jpg" alt="Sign Up Background" />
+                        <img src="/assets/images/bgSignUP.jpg" alt="Sign Up Background"/>
                         <div className="contentRight">
                             <h1>
-                                Find Your Coach in <span>N7Bk W7CH</span>
+                            Trouvez votre coach en <span>Fit2A2S</span>
                             </h1>
-                            <p>Get Fit And Always Remember (Bch Tradhi Loumima)</p>
+                            <p>Soyez en forme</p>
                         </div>
                     </div>
                 </>

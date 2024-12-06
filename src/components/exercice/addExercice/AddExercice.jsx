@@ -36,7 +36,7 @@ const AddExercice = () => {
             .test(
                 "fileSize",
                 "Image file is too large",
-                (value) => value && value[0]?.size <= 5 * 1024 * 1024
+                (value) => value && value[0]?.size <= 500 * 1024 * 1024
             )
             .test(
                 "fileType",
@@ -50,7 +50,7 @@ const AddExercice = () => {
             .test(
                 "fileSize",
                 "Video file is too large",
-                (value) => value && value[0]?.size <= 100 * 1024 * 1024
+                (value) => value && value[0]?.size <= 5000 * 1024 * 1024
             )
             .test(
                 "fileType",

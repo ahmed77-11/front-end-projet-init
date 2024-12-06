@@ -61,8 +61,8 @@
         }
 
 
-        .btnSubimtForm{
-          input{
+        .btnSubmitForm{
+          input[type="submit"]{
 
             padding: 10px 20px;
             border: none;
@@ -102,6 +102,7 @@
         font-size: 15px;
         color: var(--color-principal);
         font-weight: 800;
+        text-align: center;
       }
 
       span {

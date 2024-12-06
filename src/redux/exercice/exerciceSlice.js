@@ -96,9 +96,9 @@ export const addExercice = (exercice, navigate) => async (dispatch) => {
             { headers: { "Content-Type": "application/json" }, withCredentials: true }
         );
         dispatch(addExerciceSuccess(response.data));
-        navigate("/dashboard");
+        navigate("/coach/dashboard/myExercices");
     } catch (e) {
-        console.error(e.response.data);
+        console.error(e.message);
         dispatch(addExerciceFailed(e.message));
     }
 };
@@ -161,7 +161,7 @@ export const updateExerciceData=(id,exercice,navigate)=>async (dispatch)=>{
             withCredentials:true
         });
         dispatch(updateExerciceSuccess(response.data));
-        navigate("/dashboard");
+        navigate("/coach/dashboard/myExercices");
     }catch (e) {
         console.log(e)
         dispatch(updateExerciceFailed(e.message || "Update failed"));

@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import {useDispatch, useSelector} from "react-redux";
 import {loginClient, signInFailure} from "../../../redux/user/userSlice.js";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const LoginClient = () => {
     
@@ -55,16 +55,14 @@ const LoginClient = () => {
 
     return (
         <div className="containerLogin">
-            {loading && <div className="loader">loading</div>}
             <div className="left">
                 <div className="logo-login">
-                    <h1>N7Bk W7CH</h1>
+                    <h1>Fit2A2S</h1>
                     <span>
-                        <CiDumbbell />
                     </span>
                 </div>
                 <div className="formLogin">
-                    <h1>Sign In To Our Website</h1>
+                    <h1>Connectez-vous à notre site Web</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="formField">
                             <input
@@ -85,24 +83,30 @@ const LoginClient = () => {
                             <p className="error">{errors.password?.message}</p>
                         </div>
                         <div className="btnSubmitForm">
-                            <input type="submit" value={loading?"Submitting":"Sign In"} disabled={loading} />
+                            <input type="submit" className={"btnSubmitForm"} value={loading ? "Submitting" : "S'inscrier"}
+                                   disabled={loading}/>
                         </div>
                         {error && <p className="error">{error}</p>}
                         <div className="signUpNav">
                             <p>
-                                Don&#39;t have an account? <a href="#">Sign Up</a>
+                                Tu n&#39;as pas de compte? <Link to="/signUp">S'inscrier</Link>
+                            </p>
+                        </div>
+                        <div className="signUpNav">
+                            <p>
+                               Connecter en tant que Coach <Link to="/signInCoach">Se Connecter</Link>
                             </p>
                         </div>
                     </form>
                 </div>
             </div>
             <div className="right">
-                <img src="/assets/images/bgLogin.jpeg" alt="" />
+                <img src="/assets/images/bgLogin.jpeg" alt=""/>
                 <div className="contentRight">
                     <h1>
-                        Welcome Back In <span>N7Bk W7CH</span>
+                    Bienvenue à nouveau <span>Fit2A2S</span>
                     </h1>
-                    <p>Keep Going To Be Fit And Always (Radhi Loumima)</p>
+                    <p>Continuez à être en forme</p>
                 </div>
             </div>
         </div>

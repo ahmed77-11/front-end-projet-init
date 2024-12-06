@@ -2,11 +2,9 @@ import "./listeCoach.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchAllCoachs} from "../../../redux/coach/coachSlice.js";
 
 const ListeCoach = () => {
     const {coachs, loading, error} = useSelector((state) => state.coach);
-    const dispatch=useDispatch();
 
 
     return (
@@ -38,7 +36,7 @@ const ListeCoach = () => {
                                         />
                                     )}
                                 </div>
-                                <Link to={"/coach/" + coach.id}>
+                                <Link to={"/client/dashboard/coach/" + coach.id}>
                                     <button className="view-profile-btn">
                                         View Profile
                                     </button>

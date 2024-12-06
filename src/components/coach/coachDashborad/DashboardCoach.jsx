@@ -8,6 +8,9 @@ import ProfileClient from "../profileClient/ProfileClient.jsx";
 import MyExercices from "../myExercices/MyExercices.jsx";
 import UpdateExercice from "../../exercice/updateExercice/UpdateExercice.jsx";
 import DetailExercice from "../../exercice/detailExercice/DetailExercice.jsx";
+import AjouterProgramme from "../ajouterProgramme/AjouterProgramme.jsx";
+import AddExercice from "../../exercice/addExercice/AddExercice.jsx";
+import MesClients from "../mesClients/MesClients.jsx";
 
 const DashboardCoach = () => {
     return (
@@ -24,11 +27,14 @@ const DashboardCoach = () => {
                         <Route path="/profile" element={<ProfileCoach />} />
                         <Route path="/modifierCoach" element={<ModifierCoachProfile />} />
                         <Route path="/listeDemande" element={<ListeRequest />} />
+                        <Route path="/myClients" element={<MesClients />} />
                         <Route path={"/client/:clientId"} element={<ProfileClient />} />
                         <Route path={"/myExercices"} element={<MyExercices/>}/>
+                        <Route path={"/addExercice"} element={<AddExercice/>}/>
+
                         <Route path={"/updateExercice/:id"} element={<UpdateExercice/>}/>
                         <Route path={"/detailExercice/:id"} element={<DetailExercice/>}/>
-
+                        <Route path={"/ajouterProgramme/:clientId"} element={<AjouterProgramme/>}/>
                     </Routes>
                 </div>
             </div>

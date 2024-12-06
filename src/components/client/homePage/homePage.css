@@ -1,0 +1,132 @@
+.main-container {
+    margin: 80px auto 20px auto;
+    padding: 20px;
+    width: calc(100% - 280px);
+    max-width: 1200px;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* EXERCISES GRID */
+.exercise-list {
+    width: 100%;
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));*/
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+}
+
+.exercise-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+.image-container{
+    width: 100%;
+}
+.exercise-image {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+}
+
+.exercise-details h2 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.exercise-details h3 {
+    font-size: 1rem;
+    color: #797474;
+    margin: 10px 0;
+}
+
+.exercise-details p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.view-profile-btn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #f97316, #f59e0b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+.view-profile-btn:hover {
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid orange;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+.coach-card6 {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.coach-card6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.coach-picture6 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.coach-details6 h2 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin: 10px 0;
+    text-align: center;
+}
+.coach-details6 h3 {
+    font-size: 1rem;
+    color: #797474;
+    margin: 10px 0;
+}
+
+.coach-details6 p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+}

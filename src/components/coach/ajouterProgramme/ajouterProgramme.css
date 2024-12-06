@@ -1,0 +1,147 @@
+.containerAP {
+    position: absolute;
+    top: 80px;
+    left: 270px;
+    right: 20px;
+    margin: auto;
+    width: calc(100% - 290px);
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid orange;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    font-size: 24px;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.container .edit-profile-btn {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container .edit-profile-btn:hover {
+    background-color: #ff6600;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: orange;
+}
+/* Programme Form */
+.programme-form {
+    margin-top: 20px;
+}
+
+.form-label, h2 {
+    font-size: 20px; /* Taille uniforme */
+    color: orange;
+    font-weight: bold; /* Rendre le texte plus lisible */
+    margin-bottom: 10px; /* Espacement similaire */
+    display: block; /* S'assurer que les éléments soient en bloc */
+    text-align: left; /* Alignement à gauche (peut être modifié selon vos besoins) */
+}
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Exercises List */
+.exercises-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Exercise Card */
+/* Exercise Card */
+.exercise-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px; /* Augmenter la largeur */
+    text-align: center;
+    padding: 15px; /* Un peu plus de padding pour aérer */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-checkbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.exercise-picture {
+    width: 100%;
+    height: 120px; /* Augmenter la hauteur de l'image */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Plus d'espace sous l'image */
+}
+
+.exercise-name {
+    font-size: 18px; /* Agrandir légèrement le texte */
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Submit Button */
+.add-program-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-program-btn:hover {
+    background-color: #ff6600;
+}

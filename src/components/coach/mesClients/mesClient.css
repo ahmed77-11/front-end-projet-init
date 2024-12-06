@@ -1,4 +1,4 @@
-.containerReq {
+.containerLC{
     position: absolute;
     top: 80px;
     left: 270px;
@@ -41,7 +41,7 @@
 }
 
 /* Button Styling */
-.accept-btn5, .reject-btn5 {
+.reject-btn12, .reject-btn5 {
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 5px;
@@ -49,13 +49,13 @@
     border: none;
 }
 
-.accept-btn5 {
-    background-color: #00B69B52;
+.reject-btn12 {
+    background-color: orange;
     color: #0c4d1a;
     margin-right: 10px;
 }
 
-.accept-btn5:hover {
+.reject-btn12:hover {
     background-color: #2daf49;
 }
 

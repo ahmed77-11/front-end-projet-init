@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { signUpCoach, signUpCoachFailure } from "../../../redux/user/userSlice.js";
 
 const SignUpCoach = () => {
@@ -90,14 +90,13 @@ const SignUpCoach = () => {
 
     return (
         <div className="coachSU">
-            {loading && <div className="loader">Loading...</div>}
             <div className="containerCoachSU">
                 <div className="headerSuc">
-                    <p>Sign Up and Start Coaching</p>
+                    <p>Inscrivez-vous et commencez à coacher</p>
                     <div className="logo-su">
-                        <h1>N7Bk W7CH</h1>
+                        <h1>Fit2A2S</h1>
                         <span>
-                            <CiDumbbell />
+
                         </span>
                     </div>
                 </div>
@@ -109,7 +108,7 @@ const SignUpCoach = () => {
                                     type="text"
                                     {...register("nom")}
                                     className={`form-control ${errors.nom ? "is-invalid" : ""}`}
-                                    placeholder="First Name"
+                                    placeholder="nom"
                                 />
                                 <p className="error">{errors.nom?.message}</p>
                             </div>
@@ -118,7 +117,7 @@ const SignUpCoach = () => {
                                     type="text"
                                     {...register("prenom")}
                                     className={`form-control ${errors.prenom ? "is-invalid" : ""}`}
-                                    placeholder="Last Name"
+                                    placeholder="prenom"
                                 />
                                 <p className="error">{errors.prenom?.message}</p>
                             </div>
@@ -137,7 +136,7 @@ const SignUpCoach = () => {
                                 type="password"
                                 {...register("password")}
                                 className={`form-control ${errors.password ? "is-invalid" : ""}`}
-                                placeholder="Password"
+                                placeholder="mot de passe"
                             />
                             <p className="error">{errors.password?.message}</p>
                         </div>
@@ -146,7 +145,7 @@ const SignUpCoach = () => {
                                 type="password"
                                 {...register("passwordConfirm")}
                                 className={`form-control ${errors.passwordConfirm ? "is-invalid" : ""}`}
-                                placeholder="Confirm Password"
+                                placeholder="Confirmer mot de passe"
                             />
                             <p className="error">{errors.passwordConfirm?.message}</p>
                         </div>
@@ -154,7 +153,7 @@ const SignUpCoach = () => {
                             <ReactQuill
                                 value={description}
                                 onChange={handleInputChange}
-                                placeholder="Insert your course description."
+                                placeholder="Entrer votre description."
                                 modules={{
                                     toolbar: [
                                         ["bold", "italic", "underline"],
@@ -171,7 +170,7 @@ const SignUpCoach = () => {
                         </div>
                         <div className="uploadDouble">
                             <div className="formField1">
-                                <label htmlFor="cv">Upload Your CV</label>
+                                <label htmlFor="cv">Upload Ton CV</label>
                                 <input
                                     type="file"
                                     {...register("cv")}
@@ -181,7 +180,7 @@ const SignUpCoach = () => {
                                 <p className="error">{errors.cv?.message}</p>
                             </div>
                             <div className="formField1">
-                                <label htmlFor="diplome">Upload Your diplome</label>
+                                <label htmlFor="diplome">Upload Ton diplome</label>
                                 <input
                                     type="file"
                                     {...register("diplome")}
@@ -193,13 +192,13 @@ const SignUpCoach = () => {
                         </div>
                         <div className="btnSubmitForm">
                             <button type="submit" className="btn btn-primary">
-                                Sign Up
+                                S'inscrire
                             </button>
                         </div>
                         {error && <p className="error">{error}</p>}
                         <div className="signUpNav">
                             <p>
-                                Already Have An Account? <a href="/signin">Sign In</a>
+                                Deja à un Compte? <Link to="/signInCoach">Se Connecter</Link>
                             </p>
                         </div>
                     </form>

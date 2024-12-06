@@ -45,8 +45,6 @@ const ListeRequest = () => {
 
     useEffect(() => {
         fetchData();
-        toast.warning("You Request sended Succesfully");
-
     }, []);
 
     console.log(listReq);
@@ -68,8 +66,8 @@ const ListeRequest = () => {
                 <table className="profile-table">
                     <thead>
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
+                        <th>nom</th>
+                        <th>prenom</th>
                         <th>Email</th>
                         <th>Status</th>
                         <th>Actions</th>
@@ -84,7 +82,7 @@ const ListeRequest = () => {
                             <td>{request.enabled ? "Active" : "Not Active"}</td>
                             <td>
                                 <button
-                                    className="accept-btn"
+                                    className="accept-btn5"
                                     onClick={(event) => {
                                         event.stopPropagation(); // Prevents row click
                                         handleAction(request.id, true);
@@ -93,7 +91,7 @@ const ListeRequest = () => {
                                     Accept
                                 </button>
                                 <button
-                                    className="reject-btn"
+                                    className="reject-btn5"
                                     onClick={(event) => {
                                         event.stopPropagation(); // Prevents row click
                                         handleAction(request.id, false);

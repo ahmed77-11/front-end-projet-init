@@ -5,6 +5,7 @@ import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {toast,ToastContainer} from "react-toastify";
 import {followCoach} from "../../redux/user/userSlice.js";
+import log from "eslint-plugin-react/lib/util/log.js";
 
 const ProfileCoach = () => {
     const { id } = useParams();
